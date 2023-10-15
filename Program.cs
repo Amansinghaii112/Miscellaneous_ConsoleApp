@@ -1,9 +1,17 @@
-﻿using System;
+﻿//The given code snippet is a C# program that demonstrates various operations and functions related to arrays, delegates, and basic programming concepts.
+//Let's break down the code and explain each section:
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Miscellaneous_ConsoleApp
 {
+    /// <summary>
+    ///The code begins with the declaration and initialization of delegates.
+    ///Delegates are used to refer to methods with a specific signature.
+    ///In this code, delegates are defined for operations on integers and characters, as well as dictionary operations.
+    /// </summary>
     //Delegates.
     public delegate bool TwoIntOperation(int i, int j);
 
@@ -13,8 +21,15 @@ namespace Miscellaneous_ConsoleApp
 
     public delegate bool DictionaryCointains(Dictionary<int, int> dic, int i);
 
+    /// <summary>
+    /// The Program class contains the Main method, which is the entry point of the program. 
+    /// This method is responsible for executing the various operations and functions.
+    /// </summary>
     public class Program
     {
+        /// <summary>
+        /// The code includes several regions, each representing a different set of operations.
+        /// </summary>
         private static void Main(string[] args)
         {
             //Delegates declaration and initialization.
@@ -27,11 +42,23 @@ namespace Miscellaneous_ConsoleApp
             ThreeIntOperation ThreeIntOperation_Delegate;
             TwoCharOperation twoCharOperation_Delegate;
 
+            /// <summary>
+            /// The code initializes two integer arrays: arr and arr2. These arrays will be used for performing different operations.
+            /// </summary>
             //Data initialization
             int[] arr = { 1, 3, 5, 4, 4, 5, 3, 9, 2, 8, 4 };
             int[] arr2 = { 1, 3, 5, 4, 4, 5, 3, 9, 2, 8, 4 };
+
+            /// <summary>
+            /// The program then creates an instance of the MiscellaneousPrograms class.
+            /// </summary>
             MiscellaneousPrograms miscellaneousPrograms = new MiscellaneousPrograms();
 
+            /// <summary>
+            /// This region focuses on removing duplicate elements from an array. 
+            /// It demonstrates three different approaches: using two loops, using one loop, and using recursion without any loops. 
+            /// Each approach is explained by using appropriate delegate functions and method calls.
+            /// </summary>
             #region Remove Duplicate.
 
             headerPrint("Remove_Duplicate_2_Loops");
@@ -53,6 +80,11 @@ namespace Miscellaneous_ConsoleApp
 
             #endregion Remove Duplicate.
 
+            /// <summary>
+            /// This region deals with sorting an array. 
+            /// It showcases three sorting methods: using two loops, using one loop, and using recursion without any loops. 
+            /// Again, each approach is explained with the help of delegate functions and corresponding method calls.
+            /// </summary>
             #region Sort Array.
 
             headerPrint("Sort_2_Loops");
@@ -74,6 +106,10 @@ namespace Miscellaneous_ConsoleApp
 
             #endregion Sort Array.
 
+            /// <summary>
+            /// The program then counts the duplicate elements in the array by using a dictionary and a delegate function. 
+            /// The result is displayed using key-value pairs.
+            /// </summary>
             headerPrint("Count_Duplicate_Array");
             Func<Dictionary<int, int>, int, bool> Count_Duplicate_Array_Func = (dic, i) => dic.ContainsKey(i);
             dictionaryCointains_Delegate = new DictionaryCointains(Count_Duplicate_Array_Func);
@@ -83,6 +119,11 @@ namespace Miscellaneous_ConsoleApp
                 keyValuePairPrint(kv);
             }
 
+            /// <summary>
+            /// The code contains a region dedicated to checking whether a number is prime. 
+            /// It demonstrates the use of three integer delegate operations to determine primality. 
+            /// Two test cases are provided to show the pass and fail scenarios.
+            /// </summary>
             #region Prime.
 
             headerPrint("Prime");
@@ -93,13 +134,23 @@ namespace Miscellaneous_ConsoleApp
 
             #endregion Prime.
 
+            /// <summary>
+            /// The program calculates the Fibonacci sequence and displays the result as a list of integers.
+            /// </summary>
             headerPrint("Fibnocci");
             List<int> result_Fibnocci = miscellaneousPrograms.Fibnocci(10);
             result_Fibnocci.ForEach(x => resultPrint(x));
 
+            /// <summary>
+            /// The program calculates the factorial of a number and prints the result.
+            /// </summary>
             headerPrint("Factorial");
             resultPrint($"{miscellaneousPrograms.Factorial(5)}");
 
+            /// <summary>
+            /// This regions includes two programs for checking whether a string or a number is a palindrome. 
+            /// Appropriate delegate functions and method calls are used to perform the checks, and the results are displayed.
+            /// </summary>
             #region Palindrome.
 
             headerPrint("String_Palindrome");
@@ -118,11 +169,18 @@ namespace Miscellaneous_ConsoleApp
 
             #endregion Palindrome.
 
+            /// <summary>
+            /// The program finds the maximum sum of three adjacent numbers in an array by using a delegate function for comparison.
+            /// </summary>
             headerPrint("Add_Three_Adjecent_Get_Max");
             Func<int, int, bool> Add_Three_Adjecent_Get_Max_Func = (i, j) => i > j;
             twoIntOperation_Delegate = new TwoIntOperation(Add_Three_Adjecent_Get_Max_Func);
             resultPrint($"{miscellaneousPrograms.Add_Three_Adjecent_Get_Max(arr, twoIntOperation_Delegate)}");
 
+            /// <summary>
+            /// Two approaches are presented to find the second highest number in an array: one using loops and another without loops. 
+            /// The results are printed accordingly.
+            /// </summary>
             #region Get Second Highest Number Array.
 
             Func<int, int, bool> greater_Add_Three_Adjecent_Get_Max_Func = (i, j) => i > j;
@@ -140,6 +198,9 @@ namespace Miscellaneous_ConsoleApp
 
             #endregion Get Second Highest Number Array.
 
+            /// <summary>
+            /// This region includes some basic explanations of odd and even numbers.
+            /// </summary>
             #region ODD EVEN.
 
             headerPrint("Even");
@@ -151,6 +212,9 @@ namespace Miscellaneous_ConsoleApp
 
             //The output console will close when any keyboard key is pressed.
             Console.ReadKey();
+
+            //Overall, the code snippet demonstrates various programming concepts and techniques using C#.
+            //It covers array operations, delegate usage, recursion, sorting, counting, prime checking, palindrome checking, and finding maximum and second-highest elements in an array.
         }
     }
 }
