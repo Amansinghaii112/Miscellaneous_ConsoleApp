@@ -181,7 +181,7 @@ namespace Miscellaneous_ConsoleApp
             /// Two approaches are presented to find the second highest number in an array: one using loops and another without loops. 
             /// The results are printed accordingly.
             /// </summary>
-            #region Get Second Highest Number Array.
+            #region Get Second Highest Number From Array.
 
             Func<int, int, bool> greater_Add_Three_Adjecent_Get_Max_Func = (i, j) => i > j;
             twoIntOperation_Delegate = new TwoIntOperation(greater_Add_Three_Adjecent_Get_Max_Func);
