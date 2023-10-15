@@ -201,14 +201,14 @@ namespace Miscellaneous_ConsoleApp
             /// <summary>
             /// This region includes some basic explanations of odd and even numbers.
             /// </summary>
-            #region ODD and EVEN.
+            #region ODD EVEN.
 
             headerPrint("Even");
             resultPrint($"{10 % 2 == 0}");
             headerPrint("Odd");
             resultPrint($"{11 % 2 != 0}");
 
-            #endregion ODD and EVEN.
+            #endregion ODD EVEN.
 
             //The output console will close when any keyboard key is pressed.
             Console.ReadKey();
