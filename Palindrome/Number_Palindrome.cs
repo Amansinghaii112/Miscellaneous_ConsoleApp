@@ -13,7 +13,7 @@ namespace Miscellaneous_ConsoleApp
             while (@predicate(temp))
             {
                 int reminder = temp % 10;
-                reverse = temp * 10 + reminder;
+                reverse = reverse * 10 + reminder;
                 temp /= 10;
             }
 

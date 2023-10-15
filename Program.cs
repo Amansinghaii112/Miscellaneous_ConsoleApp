@@ -111,7 +111,7 @@ namespace Miscellaneous_ConsoleApp
             headerPrint("Number_Palindrome");
             Predicate<int> Number_Palindrome_Predicate = i => i != 0;
             Func<int, int, bool> Number_Palindrome_Func = (i, j) => i == j;
-            twoIntOperation_Delegate = new TwoIntOperation(Sort_Recursion_0_Loops_Func);
+            twoIntOperation_Delegate = new TwoIntOperation(Number_Palindrome_Func);
 
             resultPrint($"{miscellaneousPrograms.Number_Palindrome(11211, Number_Palindrome_Predicate, twoIntOperation_Delegate)} - Pass \n");
             resultPrint($"{miscellaneousPrograms.Number_Palindrome(12345, Number_Palindrome_Predicate, twoIntOperation_Delegate)} - Fail \n");
