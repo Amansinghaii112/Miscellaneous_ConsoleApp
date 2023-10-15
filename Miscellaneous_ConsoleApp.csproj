@@ -43,11 +43,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add_Three_Adjecent_Get_Max\Add_Three_Adjecent_Get_Max.cs" />
+    <Compile Include="Count_Duplicate _Array\Count_Duplicate_Array.cs" />
+    <Compile Include="Get_Second_Highest_Number_Array\Get_Second_Highest_Number_Array_No_Loop.cs" />
+    <Compile Include="Get_Second_Highest_Number_Array\Get_Second_Highest_Number_Array_WithLoop.cs" />
+    <Compile Include="Palindrome\Number_Palindrome.cs" />
+    <Compile Include="Palindrome\String_Palindrome.cs" />
+    <Compile Include="Prime_Fibnocci_Factorial\Factorial.cs" />
+    <Compile Include="Prime_Fibnocci_Factorial\Fibnocci.cs" />
+    <Compile Include="Prime_Fibnocci_Factorial\Prime.cs" />
+    <Compile Include="Remove_Duplicate_Array\Remove_Duplicate_1_Loops.cs" />
+    <Compile Include="Remove_Duplicate_Array\Remove_Duplicate_2_Loops.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Remove_Duplicate_Array\Remove_Duplicate_Recursion_0_Loops.cs" />
+    <Compile Include="Sort_Array\Sort_1_Loops.cs" />
+    <Compile Include="Sort_Array\Sort_2_Loops.cs" />
+    <Compile Include="Sort_Array\Sort_Recursion_0_Loops.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
