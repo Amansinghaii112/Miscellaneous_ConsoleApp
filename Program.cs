@@ -19,7 +19,7 @@ namespace Miscellaneous_ConsoleApp
 
     public delegate bool TwoCharOperation(char a, char b);
 
-    public delegate bool DictionaryCointains(Dictionary<int, int> dic, int i);
+    public delegate bool DictionaryIntOperation(Dictionary<int, int> dic, int i);
 
     /// <summary>
     /// The Program class contains the Main method, which is the entry point of the program. 
@@ -38,7 +38,7 @@ namespace Miscellaneous_ConsoleApp
             Action<KeyValuePair<int, int>> keyValuePairPrint = kv => Console.WriteLine($"{kv.Key} repeats {kv.Value} times");
             Action<Tuple<int, int>> TuplePrint = tu => Console.WriteLine($"Highest - {tu.Item1} \nSecond highest {tu.Item2} ");
             TwoIntOperation twoIntOperation_Delegate;
-            DictionaryCointains dictionaryCointains_Delegate;
+            DictionaryIntOperation dictionaryCointains_Delegate;
             ThreeIntOperation ThreeIntOperation_Delegate;
             TwoCharOperation twoCharOperation_Delegate;
 
@@ -112,7 +112,7 @@ namespace Miscellaneous_ConsoleApp
             /// </summary>
             headerPrint("Count_Duplicate_Array");
             Func<Dictionary<int, int>, int, bool> Count_Duplicate_Array_Func = (dic, i) => dic.ContainsKey(i);
-            dictionaryCointains_Delegate = new DictionaryCointains(Count_Duplicate_Array_Func);
+            dictionaryCointains_Delegate = new DictionaryIntOperation(Count_Duplicate_Array_Func);
             Dictionary<int, int> Count_Duplicate_Array_result = miscellaneousPrograms.Count_Duplicate_Array(arr, dictionaryCointains_Delegate);
             foreach (KeyValuePair<int, int> kv in Count_Duplicate_Array_result)
             {
@@ -205,6 +205,7 @@ namespace Miscellaneous_ConsoleApp
 
             headerPrint("Even");
             resultPrint($"{10 % 2 == 0}");
+
             headerPrint("Odd");
             resultPrint($"{11 % 2 != 0}");
 

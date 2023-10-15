@@ -5,7 +5,7 @@ namespace Miscellaneous_ConsoleApp
     public partial class MiscellaneousPrograms
     {
         //Count Duplicate Array
-        public Dictionary<int, int> Count_Duplicate_Array(int[] arr, DictionaryCointains @delegate)
+        public Dictionary<int, int> Count_Duplicate_Array(int[] arr, DictionaryIntOperation @delegate)
         {
             Dictionary<int, int> dic = new Dictionary<int, int>();
             for (int i = 0; i < arr.Length; i++)
