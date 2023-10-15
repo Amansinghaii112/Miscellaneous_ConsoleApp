@@ -194,9 +194,9 @@ namespace Miscellaneous_ConsoleApp
                 resultPrint($"{miscellaneousPrograms.Get_Second_Highest_Number_Array_WithLoop(arr, twoIntOperation_Delegate, twoIntOperation_Delegate_2)}");
 
                 headerPrint("Get_Second_Highest_Number_Array_No_Loop");
-                Tuple<int, int> tuple_Get_Second_Highest_Number_Array_No_Loop = Tuple.Create(0, 0);
-                miscellaneousPrograms.Get_Second_Highest_Number_Array_No_Loop(arr, twoIntOperation_Delegate, twoIntOperation_Delegate_2, ref tuple_Get_Second_Highest_Number_Array_No_Loop);
-                TuplePrint(tuple_Get_Second_Highest_Number_Array_No_Loop);
+                Tuple<int, int> tuple_Get_Second_Highest_Number_Array_WithLoop = Tuple.Create(0, 0);
+                miscellaneousPrograms.Get_Second_Highest_Number_Array_No_Loop(arr, twoIntOperation_Delegate, twoIntOperation_Delegate_2, ref tuple_Get_Second_Highest_Number_Array_WithLoop);
+                TuplePrint(tuple_Get_Second_Highest_Number_Array_WithLoop);
 
                 #endregion Get Second Highest Number From Array.
 
@@ -218,8 +218,7 @@ namespace Miscellaneous_ConsoleApp
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Exception Message :- {0}",ex.Message);
-                Console.ReadKey();
+                Console.WriteLine(ex.Message);
             }
 
             //Overall, the code snippet demonstrates various programming concepts and techniques using C#.
