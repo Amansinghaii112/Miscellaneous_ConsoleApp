@@ -196,7 +196,7 @@ namespace Miscellaneous_ConsoleApp
             miscellaneousPrograms.Get_Second_Highest_Number_Array_No_Loop(arr, twoIntOperation_Delegate, twoIntOperation_Delegate_2, ref tuple_Get_Second_Highest_Number_Array_WithLoop);
             TuplePrint(tuple_Get_Second_Highest_Number_Array_WithLoop);
 
-            #endregion Get Second Highest Number Array.
+            #endregion Get Second Highest Number From Array.
 
             /// <summary>
             /// This region includes some basic explanations of odd and even numbers.
