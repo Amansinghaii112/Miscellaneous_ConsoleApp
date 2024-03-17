@@ -66,11 +66,16 @@ namespace Miscellaneous_ConsoleApp
                 headerPrint("Remove_Duplicate_2_Loops");
                 Func<int, int, bool> Remove_Duplicate_2_Loops_Func = (i, j) => i == j;
                 twoIntOperation_Delegate = new TwoIntOperation(Remove_Duplicate_2_Loops_Func);
-                List<int> result_Remove_Duplicate_2_Loops = miscellaneousPrograms.Remove_Duplicate_2_Loops(arr, twoIntOperation_Delegate);
-                result_Remove_Duplicate_2_Loops.ForEach(x => resultPrint(x));
+                IEnumerable<int> result_Remove_Duplicate_2_Loops = miscellaneousPrograms.Remove_Duplicate_2_Loops(arr, twoIntOperation_Delegate);
+                //List<int> result_Remove_Duplicate_2_Loops = miscellaneousPrograms.Remove_Duplicate_2_Loops(arr, twoIntOperation_Delegate).ToList();
+                //result_Remove_Duplicate_2_Loops.ForEach(x => resultPrint(x));
+                foreach(int i in result_Remove_Duplicate_2_Loops)
+                {
+                    resultPrint(i);
+                }
 
                 headerPrint("Remove_Duplicate_1_Loops");
-                HashSet<int> result_Remove_Duplicate_1_Loops = miscellaneousPrograms.Remove_Duplicate_1_Loops(arr);
+                IEnumerable<int> result_Remove_Duplicate_1_Loops = miscellaneousPrograms.Remove_Duplicate_1_Loops(arr);
                 result_Remove_Duplicate_1_Loops.ToList().ForEach(x => resultPrint(x));
 
                 headerPrint("Remove_Duplicate_Recursion_0_Loops");

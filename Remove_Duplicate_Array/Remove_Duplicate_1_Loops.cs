@@ -5,14 +5,16 @@ namespace Miscellaneous_ConsoleApp
     public partial class MiscellaneousPrograms
     {
         //Remove Duplicate Using 1 Loops.
-        public HashSet<int> Remove_Duplicate_1_Loops(int[] arr)
+        public IEnumerable<int> Remove_Duplicate_1_Loops(int[] arr)
         {
-            HashSet<int> result = new HashSet<int>();
+            HashSet<int> result = new HashSet<int>(); // HashSet to track duplicates.
             for (int i = 0; i < arr.Length; i++)
             {
-                result.Add(arr[i]);
+                if (result.Add(arr[i]))
+                {
+                    yield return arr[i];
+                }
             }
-            return result;
         }
     }
 }
