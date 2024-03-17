@@ -1,4 +1,6 @@
-﻿namespace Miscellaneous_ConsoleApp
+﻿using System.Collections.Generic;
+
+namespace Miscellaneous_ConsoleApp
 {
     public partial class MiscellaneousPrograms
     {
@@ -13,6 +15,19 @@
                 }
             }
             return true;
+        }
+
+        /// <summary>
+        /// Get prime numbers till the given argument.
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns></returns>
+        public IEnumerable<int> PrimeList(int num)
+        {
+            for (int i = 0; i <= num; i += 2)
+            {
+                yield return i;
+            }
         }
     }
 }

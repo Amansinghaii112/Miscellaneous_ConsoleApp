@@ -139,6 +139,12 @@ namespace Miscellaneous_ConsoleApp
                 resultPrint($"{miscellaneousPrograms.Prime(17, ThreeIntOperation_Delegate)} - Pass \n");
                 resultPrint($"{miscellaneousPrograms.Prime(18, ThreeIntOperation_Delegate)} - Fail");
 
+                headerPrint("PrimeList");
+                foreach(int i in miscellaneousPrograms.PrimeList(13))
+                {
+                    resultPrint(i);
+                }
+
                 #endregion Prime.
 
                 /// <summary>
