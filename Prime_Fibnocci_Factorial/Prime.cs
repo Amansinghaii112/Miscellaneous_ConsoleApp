@@ -18,11 +18,11 @@ namespace Miscellaneous_ConsoleApp
         }
 
         /// <summary>
-        /// Get prime numbers till the given argument.
+        /// Get even numbers till the given argument.
         /// </summary>
         /// <param name="num"></param>
-        /// <returns></returns>
-        public IEnumerable<int> PrimeList(int num)
+        /// <returns>IEnumerable of int.</returns>
+        public IEnumerable<int> EvenList(int num)
         {
             for (int i = 0; i <= num; i += 2)
             {
